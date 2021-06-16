@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block head %}
+        <meta http-equiv="refresh" content="10"/>
+{% endblock %}
+{% block content %}
+<div class="container text-center" style="margin: 90px 0 30px;">
+    <h1>Shopee Shop Products Scraper</h1>
+    <h3 style="color: orange">Please wait, scraping <i>"{{ query }}"</i> in progress...</h3>
+        <!--- <div class="row" style="margin: 60px 0 30px;">
+            <div class="col">
+                <a class="btn btn-info" href="/scrape" role="button">Refresh Page</a>
+            </div>
+        </div> --->
+</div>
+{% endblock %}

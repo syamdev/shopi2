@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center" style="margin: 90px 0 30px;">
+    <h1>Shopee Shop Products Scraper</h1>
+    {% if message %}
+    <h3 style="color: Red">{{ message }} Please go to Home Page and re-scrape or use another keyword!.</h3>
+    {% else %}
+    <h3 style="color: Red">Scraping job is error. Please go to Home Page and re-scrape or use another keyword!.</h3>
+    {% endif %}
+
+        <div class="row" style="margin: 60px 0 30px;">
+            <div class="col">
+                <a class="btn btn-info" href="/" role="button">Home Page</a>
+            </div>
+        </div>
+</div>
+{% endblock %}

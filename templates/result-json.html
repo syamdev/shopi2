@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" style="margin: 90px 0 30px;">
+    <h1 class="text-center">Scraping Result</h1>
+    <h3 class="text-center" style="color: green">The file is ready to download.</h3>
+        <div class="row" style="margin: 60px 0;">
+            <div class="col-md-12 text-center">
+                <a class="btn btn-primary" href="/download/{{ output_filename }}" role="button" style="margin-bottom: 30px;">Download</a>
+            </div>
+            <div class="col-md-12">
+                <pre style="background: #eeeeee; max-height: 600px; padding:15px;">{{ output_json }}</pre>
+            </div>
+        </div>
+</div>
+{% endblock %}

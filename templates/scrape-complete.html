@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container text-center" style="margin: 90px 0 30px;">
+    <h1>Shopee Shop Products Scraper</h1>
+    <h3 style="color: green">Scraping <i>"{{ query }}"</i> is Complete</h3>
+        <div class="row" style="margin: 60px 0 30px;">
+            <div class="col">
+                <a class="btn btn-success" href="/files" role="button">Go To List Page</a>
+            </div>
+        </div>
+</div>
+{% endblock %}

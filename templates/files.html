@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container" style="margin: 90px 0 30px;">
+    <h1 class="text-center">File List</h1>
+    <h3 class="text-center" style="color: blue">The Scraping Result Files</h3>
+    <div class="table-responsive-md" style="margin: 30px 0;">
+        {% if files %}
+         <table class="table">
+             <tbody>
+             {% for file in files %}
+                 <tr>
+                     <td class="align-middle">{{ file }}</td>
+                     <td class="align-middle"><div class="float-right"><a class="btn btn-dark" href="/files/{{ file }}" role="button" style="margin: 5px 0">View</a> <a class="btn btn-dark" href="/download/{{ file }}" role="button" style="margin: 5px 0">Download</a></div></td>
+                 </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <h5 class="text-center"> There's no file yet.</h5>
+        {% endif %}
+    </div>
+    {% if pagination %}
+    <div class="row" style="justify-content: center; padding-top:15px;">{{ pagination.links }}</div>
+    {% endif %}
+</div>
+{% endblock %}
