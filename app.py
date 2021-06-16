@@ -6,7 +6,7 @@ from wtforms.validators import DataRequired, Length, Regexp
 from scrapy import signals
 from scrapy.crawler import CrawlerRunner
 from scrapy.signalmanager import dispatcher
-from scraper import ShopeeSpider, query_input
+from .scraper import ShopeeSpider, query_input
 from datetime import timedelta
 import pandas as pd
 import urllib.parse
